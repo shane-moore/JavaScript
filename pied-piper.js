@@ -23,6 +23,6 @@ function countDeafRats(town) {
     return count;
 
    
-}
+// }
 
-countDeafRats("PO~O~O~O~O~O~O~O~O~O~O~O~~O  O~O~~O~O");
+countDeafRats("PO~O~O~O~O~O~O~O~O~O~O~O~~O P O~O~~O~OP~~~");
