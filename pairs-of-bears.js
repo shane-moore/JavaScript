@@ -5,7 +5,8 @@
 
 function bears(x, s){
     let bearCouple = s.match(/8B|B8/g).join('');
+    console.log(bearCouple);
     return [bearCouple, bearCouple.length >= x];
 }
 
-bears(7, '8j8mB8')
+bears(7, '8j8mB88BB85')
