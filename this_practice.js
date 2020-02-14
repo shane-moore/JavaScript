@@ -18,4 +18,4 @@ getCurrentPhoto: function() {
     return this.photoList[currentPhotoIndex]
 
 }
-console.log("git practice");
+console.log("git practice rawr");
