@@ -1,0 +1,2 @@
+# ignore Web.Config when pushing to remote branch as it contains Connection Strings
+/this_practice.js
