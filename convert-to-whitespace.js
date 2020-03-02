@@ -13,19 +13,27 @@
 // return String;
 
 function whitespaceNumber(n) {
-  if (n !== 0) {
-    let newN = n
-      .toString(2)
-      .split("")
-      .map(num => {
-        if (num === "1") return "\t";
-        if (num === "0") return " ";
-      });
-    if (n === 0) return ` \n`;
-    if (Math.sign(n) > 0) {
-      return ` ${newN.join("")}\n`;
-    } else return `\t${newN.join("")}\n`;
-  }
+  // if (n !== 0) {
+  //   let newN = n
+  //     .toString(2)
+  //     .split("")
+  //     .map(num => {
+  //       if (num === "1") return "\t";
+  //       if (num === "0") return " ";
+  //     });
+  //   if (Math.sign(n) > 0) {
+  //     return ` ${newN.join("")}\n`;
+  //   } else return `\t${newN.join("")}\n`;
+  // } else return ` \n`;
+  // return sign transformed, value transformed + linefeed
+  // return ( n > 0 ? " ": '' ) + n.toString(2).replace(/0/g," ").replace(/[-1]/,\t)+'\n';
+  return n == 0
+    ? " \n"
+    : (n < 0 ? "\t" : " ") +
+        Math.abs(n)
+          .toString(2)
+          .replace(/[01]/g, e => (e == 0 ? " " : "\t")) +
+        "\n";
 }
 
 whitespaceNumber(-7);
