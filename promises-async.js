@@ -28,5 +28,11 @@ async function willSmith() {
   console.log(`${a} ${b} ${c}`)
 }
 
+async function willSmithers() {
+  const [a, b, c] = await Promise.all([who(), verb(), what()])
+  console.log(`${a} ${b} ${c}`);
+}
+
 willSmith()
+willSmithers()
 
